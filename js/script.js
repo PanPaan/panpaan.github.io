@@ -2,6 +2,20 @@
 $(document).ready(function(){
 // !! code start !!
 
+//모바일 감지 이동
+var filter = "win16|win32|win64|mac|macintel";
+if ( navigator.platform ) {
+  if(filter.indexOf( navigator.platform.toLowerCase() ) < 0 ){
+    alert('mobile 접속');
+    // var linkEl = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
+    // $('body').append(linkEl);
+    // var findEl = $('body').find('.mobileGo');
+    // findEl.trigger('click');
+  }else{
+    alert('pc 접속');
+  }
+}
+
 // 네비게이션
 var naviInteraction = function(){
   var $item = $('.nav_item');
