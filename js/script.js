@@ -2,6 +2,9 @@
 $(document).ready(function(){
 // !! code start !!
 
+//모바일 감지
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
 // 네비게이션
 var naviInteraction = function(){
   var $item = $('.nav_item');
@@ -264,6 +267,13 @@ var resizeFunc = function(){
   howtoInteraction();
 };
 var docReady = function(){
+  if(!isMobile) {
+    console.log('데스크탑입니다.');
+    var linkBtn = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
+    $('body').append(linkBtn);
+    var findBtn = $('body').find('.mobileGo');
+    findBtn.trigger('click');
+  }
   $(window).resize(resizeFunc);
   $(window).scroll(scrollFunc)
   naviInteraction();
