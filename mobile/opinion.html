@@ -237,7 +237,12 @@ body{
 
 <script src="js/common.js"></script>
 <script type="text/javascript">
-var $underBtn = $('.underbox .under_item.middle .icons');
+var $underBtn = $('.underbox .under_item.middle .icons'),
+    $ctn = $('.ctn');
+
+var winW = $(window).width();
+$ctn.width(winW);
+
 $underBtn.on('click', function(){
   if($(this).hasClass('voteSpan')){
     $(this).removeClass('voteSpan').addClass('demoSpan2');
@@ -261,7 +266,7 @@ $navBtn.on('click', function(){
     },450,'easeInOutCubic');
   }else{
     $('.ctn_box').animate({
-      'left':'-100%'
+      'left':'-' + winW +'px'
     },450,'easeInOutCubic');
   }
 });

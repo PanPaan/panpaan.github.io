@@ -187,8 +187,12 @@ h2 b{color: #1990ff;}
   display: inline-block;
   background-color: #777777;
 }
-#best4 > .cwrp .best4_ul .best4_item .front_dl dt{font-size: 13px; font-weight: bold;}
-#best4 > .cwrp .best4_ul .best4_item .front_dl dd{font-size: 16px;}
+#best4 > .cwrp .best4_ul .best4_item .front_dl dt{
+  font-size: 13px; font-weight: bold;
+}
+#best4 > .cwrp .best4_ul .best4_item .front_dl dd{
+  margin-top: 4px;
+  font-size: 16px;}
 #best4 > .cwrp .best4_ul .best4_item .hover{
   z-index: 3;
   /*line-height: 80px;*/
@@ -317,6 +321,9 @@ h2 b{color: #1990ff;}
   background-size: cover;
 }
 
+#total table tbody tr td ul li{
+  margin-bottom: 4px;
+}
 
 #total table tbody tr td:last-child{
   position: relative;
