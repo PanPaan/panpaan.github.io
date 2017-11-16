@@ -287,6 +287,22 @@
   background-position: -78px 0;
   background-size: auto 100%;
 }
+.content_list_ul li:nth-of-type(4) .userimg{
+  position: relative;
+  display: inline-block;
+  width: 39px; height: 39px;
+  background-image: url(../img/user_icons.png);
+  background-position: -118px 0;
+  background-size: auto 100%;
+}
+.content_list_ul li:nth-of-type(5) .userimg{
+  position: relative;
+  display: inline-block;
+  width: 39px; height: 39px;
+  background-image: url(../img/user_icons.png);
+  background-position: -156px 0;
+  background-size: auto 100%;
+}
 .userimg::after{
   content: '';
   position: absolute;
