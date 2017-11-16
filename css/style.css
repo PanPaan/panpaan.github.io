@@ -1,5 +1,9 @@
 /*NOTE :: 메인칼라 main color '#1990ff' */
-
+.mobileGo{
+  display: inline-block;
+  width: 100px; height: 100px;
+  border: 1px solid #000;
+}
 /*transition: all 0.1s ease-in-out;*/
 .video_btn_item a
 {transition: all 100ms ease-in-out;}
