@@ -6,13 +6,9 @@ $(document).ready(function(){
 var filter = "win16|win32|win64|mac|macintel";
 if ( navigator.platform ) {
   if(filter.indexOf( navigator.platform.toLowerCase() ) < 0 ){
-    alert('mobile 접속');
-    // var linkEl = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
-    // $('body').append(linkEl);
-    // var findEl = $('body').find('.mobileGo');
-    // findEl.trigger('click');
+    location.href = 'index2.html';
   }else{
-    alert('pc 접속');
+    console.log('pc접속');
   }
 }
 

@@ -17,6 +17,12 @@ nav ul li{
   text-align: center;
   width: 110px;
 }
+nav ul li > *{
+  transition: all 0.2s ease;
+}
+nav ul li:hover a{
+  color: #1990ff;
+}
 nav ul li a{
   color: #fff;
   font-size: 16px;
