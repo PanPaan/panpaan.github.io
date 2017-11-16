@@ -36,6 +36,7 @@
   font-size: 9pt;
 }
 .content{
+  z-index: 33;
   width: 100%;
 }
 .content .content_img{
