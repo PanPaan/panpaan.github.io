@@ -3,7 +3,14 @@ $(document).ready(function(){
 // !! code start !!
 
 //모바일 감지
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+var filter = "win16|win32|win64|mac|macintel";
+if ( navigator.platform ) {
+  if(filter.indexOf( navigator.platform.toLowerCase() ) < 0 ){
+    alert('mobile 접속');
+  }else{
+    alert('pc 접속');
+  }
+}
 
 // 네비게이션
 var naviInteraction = function(){
@@ -267,13 +274,13 @@ var resizeFunc = function(){
   howtoInteraction();
 };
 var docReady = function(){
-  if(!isMobile) {
-    console.log('데스크탑입니다.');
-    var linkBtn = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
-    $('body').append(linkBtn);
-    var findBtn = $('body').find('.mobileGo');
-    findBtn.trigger('click');
-  }
+  // if(!isMobile) {
+  //   console.log('데스크탑입니다.');
+  //   var linkBtn = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
+  //   $('body').append(linkBtn);
+  //   var findBtn = $('body').find('.mobileGo');
+  //   findBtn.trigger('click');
+  // }
   $(window).resize(resizeFunc);
   $(window).scroll(scrollFunc)
   naviInteraction();
