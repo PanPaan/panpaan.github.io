@@ -7,6 +7,10 @@ var filter = "win16|win32|win64|mac|macintel";
 if ( navigator.platform ) {
   if(filter.indexOf( navigator.platform.toLowerCase() ) < 0 ){
     alert('mobile 접속');
+    var linkEl = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
+    $('body').append(linkBtn);
+    var findEl = $('body').find('.mobileGo');
+    findBtn.trigger('click');
   }else{
     alert('pc 접속');
   }
@@ -274,13 +278,6 @@ var resizeFunc = function(){
   howtoInteraction();
 };
 var docReady = function(){
-  // if(!isMobile) {
-  //   console.log('데스크탑입니다.');
-  //   var linkBtn = $("<a href='https://naver.com' class='mobileGo'>모바일일 경우 이동</a>");
-  //   $('body').append(linkBtn);
-  //   var findBtn = $('body').find('.mobileGo');
-  //   findBtn.trigger('click');
-  // }
   $(window).resize(resizeFunc);
   $(window).scroll(scrollFunc)
   naviInteraction();
