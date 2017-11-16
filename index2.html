@@ -33,14 +33,14 @@
       font-size: 20pt ;
     }
     img{
-      width: 60%;
+      width :45%;
       /*padding: 6% 0;*/
     }
     .notice{
       width: 94%; height: 94%;
       /*background-color: #1990ff;*/
       background-color: rgba(25, 144, 255, 0.5);
-      border: 3px solid rgba(255, 255, 255, 0.8);
+      border: 2px solid #fff;
       box-sizing: border-box;
       border-radius: 10px;
       position: absolute;
@@ -51,6 +51,13 @@
       width: 100%; height: 100%;
       position: relative;
       display: inline-block;
+    }
+    .p{
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 75px;
+      font-weight: bold;
     }
     ul{
       width: 100%;
@@ -71,12 +78,13 @@
       background-color: #fff;
     }
     li:first-child{
-      border-right: 1px solid #1990ff;
+      border-right: 1px solid rgba(25, 144, 255, 0.51);
     }
     h1{
       font-size: 14px;
       font-style: italic;
       line-height: 1.1rem;
+      opacity: 0.8;
     }
     a{
       text-decoration: none;
@@ -93,13 +101,13 @@
     <div class="notice">
       <div class="wrp">
         <div class="hbox">
-          <p>세상을 바꾸는 재판</p>
-          <img src="mobile/img/logo_text_white.png" alt="" class="img">
+          <img src="img/logo_plus_white.png" alt="" class="img">
           <h1>
             판판 소개페이지는 <br>웹 FHD 환경에 최적화 되어있습니다.  <br>
             추후 다양한 디바이스를 지원하겠습니다.
           </h1>
         </div>
+        <div class="p">디자인 구조 둘러보기</div>
         <ul>
           <li><a href="web_design/index.html">WEB</a></li>
           <li><a href="mobile/index.html">MOBILE</a></li>
@@ -112,7 +120,7 @@
           $win = $(window),
           winH = $win.height(),
           num = (winH /2) - (hboxH /2) - 60,
-          marginNum = winH/10;
+          marginNum = winH/18;
 
       $(window).resize(function(){
         $hbox.css({
@@ -130,7 +138,6 @@
       $('.img').css({
         'margin-bottom': marginNum
       })
-
 
     </script>
   </body>
