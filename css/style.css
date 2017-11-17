@@ -473,17 +473,20 @@ section.section_howto{
   /*background-color: #555555;*/
 
   float: left;
-  font-size: 36px;
+  font-size: 20px;
 }
 .howto_monitor_view_img{
   height: 100%;
   position: relative;
 }
-.howto_monitor_view_item:nth-child(1) .howto_monitor_view_img:nth-child(1){
-  background: url(../img/logo_plus_white.png) no-repeat ;
-  background-position: center center;
-  -webkit-background-size: 33%;
-  background-size: 33%;
+.howto_monitor_view_item:nth-child(1) .howto_monitor_view_img:nth-child(1) p{
+  bottom: 38%; font-size: 34px;
+  letter-spacing: -2px;
+}
+.howto_monitor_view_item:nth-child(1) .howto_monitor_view_img:nth-child(1) span{
+  position: absolute;width: 100%;
+  bottom: 20%; right: 0;
+  color: #777676;
 }
 .howto_monitor_view_item:nth-child(2) .howto_monitor_view_img{
   background: url(../img/howto_1.jpg) no-repeat center;
@@ -512,9 +515,9 @@ section.section_howto{
 }
 .howto_monitor_view_img p{
   width: 100%;
-  position: absolute; bottom: 15%;
+  position: absolute;bottom: 0;
   line-height: 2em;
-  background-color: rgba(68, 66, 66, 0.5);
+  background-color: rgba(68, 66, 66, 0.83);
   padding: 20px 0;
 }
 
@@ -584,18 +587,18 @@ section.section_footer{
 .section_footer .hbox h2{
   margin-top: 0;
   color: #555;
-  font-size: 80px;
+  font-size: 40px;
   color: #fff;
   font-weight: normal;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.37);
-  padding-bottom: 5px;
+  padding-bottom: 32px;
 }
-.section_footer .hbox .professor{color: #aaa ;}
+/*.section_footer .hbox .professor{color: #aaa ;}
 .section_footer .hbox .professor p:first-child{
   font-size: 15px;
   margin-bottom: 10px;
 }
-.section_footer .hbox .professor p:last-child{font-size: 30px;}
+.section_footer .hbox .professor p:last-child{font-size: 30px;}*/
 .section_footer .hbox .member{
   font-size: 30px;
   color: #fff;
