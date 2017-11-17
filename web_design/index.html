@@ -13,6 +13,9 @@
 </head>
 
 <body>
+  <div id="notice_box">
+    왼쪽 화면에 전시되어 있습니다.
+  </div>
 <!-- body start-->
 <header>
   <!-- <a href="https://panpaan.github.io"><div class="intro">GO</div></a> -->
@@ -20,7 +23,7 @@
     <nav>
       <ul>
         <li><a href="index.html" class="txt_dl">로고</a></li>
-        <li><a href="../index.html">서비스소개</a></li>
+        <li><a href="#">서비스소개</a></li>
         <li><a href="hot.html">핫이슈재판</a></li>
         <li><a href="result.html">카테고리</a></li>
         <li><a href="select_1.html">진행재판</a></li>
@@ -120,6 +123,8 @@
   </div>
 </section>
 
+
+
 <footer>
   <div class="cwrp">
     <ul>
@@ -135,5 +140,39 @@
 
 <!-- body end-->
 <!-- <script src="js/common.js"></script> -->
+<script>
+
+var noticeFunc = function(){
+  var $_service = $('nav ul > li').eq(1);
+  var $_notice = $('#notice_box');
+  var winH = $(window).height();
+  var winW = $(window).width();
+
+  var noticeResize =  function(){
+    $_notice.css({
+      'top':winH/2 - $_notice.height()/2,
+      'left':winW/2 - $_notice.width()/2
+    });
+  }
+  noticeResize();
+
+  $_service.on('click', function(){
+    console.log('sd');
+    $_notice.animate({
+      'opacity':1
+    },500,'easeOutQuint', function(){
+        $_notice.animate({
+          'opacity':0
+        },500,'easeInQuint')
+    })
+  });
+
+};
+noticeFunc();
+$(window).resize(function(){
+  noticeFunc();
+});
+
+</script>
 </body>
 </html>
