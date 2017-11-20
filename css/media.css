@@ -9,9 +9,9 @@
 .slider_item_num{
   font-size: 30px;
 }
-body{
+/*body{
   background-color: #3d3;
-}
+}*/
 
 
 /*end*/
@@ -19,7 +19,7 @@ body{
 
 @media screen and (max-width:939px){
 /*start*/
-body{
+/*body{
   background-color: #d3d;
-}
+}*/
 }
